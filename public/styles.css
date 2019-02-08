@@ -9,8 +9,88 @@
   box-sizing: inherit;
 }
 
-html {
-  box-sizing: border-box;
+body {
+  font-size: 16px;
 }
 
-/* todo útfæra útlit */
+.all {
+  margin: 0 auto;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h4 {
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+}
+
+.container-uppl {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  padding: 0.5rem;
+}
+
+.titles-answers {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.div-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0.5rem auto;
+}
+
+.div-info input, textarea {
+  padding: 0.5rem; 
+  width: 80%;
+  border: 0.0625rem solid #888;
+  border-radius: 0.2rem;
+}
+
+form > div > div > div > label {
+  width: 20%;
+}
+
+.container-starf {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.div-forritari, .div-honnudur, .div-verkefnastjori {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.applybtn {
+  padding: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.apply {
+  padding: 0.5rem 0.5rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  background-color: white;
+  border: 0.0625rem solid #888;
+  border-radius: 0.2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  padding-left: 0.8rem;
+}

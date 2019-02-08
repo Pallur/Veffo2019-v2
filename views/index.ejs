@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+<main>
+  <div class="all">
+    <form method="post" action="/register">
+      <div class="container-uppl">
+        <h1>Atvinnuumsókn</h1>
+        <div class="titles-answers">
+          <div class="div-info">
+            <label for="name">Nafn</label>
+            <input id="name" name="name" value="<%= name%>"></div>
+          <div class="div-info">
+            <label for="email">Netfang</label>
+            <input id="email" name="email" value="<%= email%>"></div>
+          <div class="div-info">
+            <label for="phone">Sími</label>
+            <input id="phone" name="phone" value="<%= phone%>"></div>
+          <div class="div-info">
+            <label for="text">Kynning á þér:</label>
+            <textarea rows="4" cols="30" id="text" name="text" value="<%= text%>"></textarea></div>
+        </div>
+      </div>
+
+
+      <div class="container-starf">
+        <h4>Starf sem sótt er um:</h4>
+        <div class="div-forritari">
+          <input type="radio" name="job" value="forritari" <% if(job=='forritari' ) {%> checked
+          <%}%>><p>Forritari</p>
+        </div>
+        <div class="div-honnudur">
+          <input type="radio" name="job" value="honnudur" <% if(job=='honnudur' ) {%> checked
+          <%}%>><p>Hönnuður</p>
+        </div>
+        <div class="div-verkefnastjori">
+          <input type="radio" name="job" value="verkefnastjori" <% if(job=='verkefnastjori' ) {%> checked
+          <%}%>><p>Verkefnastjóri</p>
+        </div>
+      </div>
+
+      <div class="error">
+        <% if(errors) { %>
+        <h4>Vandræði við að senda umsókn:</h4>
+        <ul>
+          <% errors.forEach((error) => { %>
+          <li>
+            <%= error.msg %>
+          </li>
+          <% }) %>
+        </ul>
+        <% } %>
+      </div>
+
+
+      <div class="applybtn">
+        <button type="submit" class="apply">Senda umsókn</button>
+      </div>
+      <hr>
+    </form>
+
+  </div>
+</main>
+
+</html>
