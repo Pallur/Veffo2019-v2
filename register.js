@@ -6,7 +6,8 @@ const { insert } = require('./db');
 
 const router = express.Router();
 
-function catchErrors(fn) {
+// tók út þar sem ég fékk TypeError catch undefined :(
+function catchErrors(fn) { // eslint-disable-line
   return (req, res, next) => fn(req, res, next).catch(next);
 }
 

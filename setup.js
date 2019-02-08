@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const fs = require('fs');
 const util = require('util');
-const path = require('path');
+const path = require('path'); // eslint-disable-line
 
 const { Client } = require('pg');
 
